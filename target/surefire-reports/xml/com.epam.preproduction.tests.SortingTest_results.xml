@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testNG test1"
+           tests="2"
+           failures="2"
+           errors="0"
+           skipped="0"
+           time="6,197">
+  <properties />
+            <testcase name="testSortingByPrice" time="0,000" classname="com.epam.preproduction.tests.SortingTest">
+                <failure type="org.openqa.selenium.remote.SessionNotFoundException"
+                  message="The FirefoxDriver cannot be used after quit() was called.
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver"
+              >
+<![CDATA[org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: RemoteWebDriver
+  org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:364)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+  org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
+  com.epam.preproduction.tests.TestBase.goToMainPage(TestBase.java:43)
+  com.epam.preproduction.tests.SortingTest.testSortingByPrice(SortingTest.java:38)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+  org.testng.TestRunner.privateRun(TestRunner.java:757)
+  org.testng.TestRunner.run(TestRunner.java:608)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+  org.testng.SuiteRunner.run(SuiteRunner.java:240)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+  org.testng.TestNG.run(TestNG.java:999)
+  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
+  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+  org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+  org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testSortingByName" time="6,197" classname="com.epam.preproduction.tests.SortingTest">
+                <failure type="org.openqa.selenium.WebDriverException"
+                  message="An invalid or illegal string was specified
+Command duration or timeout: 15 milliseconds
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: f1f925f0-8a09-472e-a538-b05233bcb86b
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]"
+              >
+<![CDATA[org.openqa.selenium.WebDriverException: An invalid or illegal string was specified
+Command duration or timeout: 15 milliseconds
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_25'
+Session ID: f1f925f0-8a09-472e-a538-b05233bcb86b
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+  java.lang.reflect.Constructor.newInstance(Unknown Source)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:388)
+  org.openqa.selenium.By$ByClassName.findElement(By.java:371)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+  org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+  org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+  com.sun.proxy.$Proxy8.getText(Unknown Source)
+  com.epam.preproduction.helpers.SortingTestHelper.grabItems(SortingTestHelper.java:81)
+  com.epam.preproduction.helpers.SortingTestHelper.verifySortingItemsByNames(SortingTestHelper.java:54)
+  com.epam.preproduction.tests.SortingTest.testSortingByName(SortingTest.java:48)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+  org.testng.TestRunner.privateRun(TestRunner.java:757)
+  org.testng.TestRunner.run(TestRunner.java:608)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+  org.testng.SuiteRunner.run(SuiteRunner.java:240)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+  org.testng.TestNG.run(TestNG.java:999)
+  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
+  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+  org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+  org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: An invalid or illegal string was specified
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>

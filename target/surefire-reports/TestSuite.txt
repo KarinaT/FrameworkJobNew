@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.499 sec <<< FAILURE!
+testItemInformation(com.epam.preproduction.tests.CheckItemInformation)  Time elapsed: 3.065 sec  <<< FAILURE!
+java.lang.NullPointerException: null value in entry: name=null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:235)
+	at com.google.common.collect.ImmutableMap.entryOf(ImmutableMap.java:144)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:89)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:122)
+	at com.epam.preproduction.helpers.CheckItemInformationTestHelper.gerUrls(CheckItemInformationTestHelper.java:60)
+	at com.epam.preproduction.helpers.CheckItemInformationTestHelper.verifyItemLinksAreEqual(CheckItemInformationTestHelper.java:110)
+	at com.epam.preproduction.tests.CheckItemInformation.testItemInformation(CheckItemInformation.java:34)
+

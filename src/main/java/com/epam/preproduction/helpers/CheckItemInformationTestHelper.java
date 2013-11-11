@@ -1,0 +1,111 @@
+package com.epam.preproduction.helpers;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.epam.preproduction.pages.CataloguePage;
+import com.epam.preproduction.pages.ItemPage;
+import com.epam.preproduction.pages.PricePage;
+
+public class CheckItemInformationTestHelper {
+	private static CataloguePage cataloguePage;
+	private static PricePage pricePage;
+	private static ItemPage itemPage;
+
+	public static ItemPage getItemPage() {
+		return itemPage;
+	}
+
+	public static void setItemPage(ItemPage itemPage) {
+		CheckItemInformationTestHelper.itemPage = itemPage;
+	}
+
+	public static CataloguePage getCataloguePage() {
+		return cataloguePage;
+	}
+
+	public static void setCataloguePage(CataloguePage cataloguePage) {
+		CheckItemInformationTestHelper.cataloguePage = cataloguePage;
+	}
+
+	public static PricePage getPricePage() {
+		return pricePage;
+	}
+
+	public static void setPricePage(PricePage pricePage) {
+		CheckItemInformationTestHelper.pricePage = pricePage;
+	}
+
+	public static void setPages(CataloguePage cataloguePage,
+			PricePage pricePage, ItemPage itemPage) {
+		CheckItemInformationTestHelper.cataloguePage = cataloguePage;
+		CheckItemInformationTestHelper.pricePage = pricePage;
+		CheckItemInformationTestHelper.itemPage = itemPage;
+
+	}
+
+	public void gerUrls(List<String> catalogueLinks, List<String> pricePageLinks) {
+		List<String> urlList = new ArrayList<String>();
+		List<String> namesList = new ArrayList<String>();
+
+		for (int i = 1; i < 6; i++) {
+			List<WebElement> names = cataloguePage.getCompareBlock()
+					.getItemsToCompare();
+			for (WebElement webElement : names) {
+				String hrefs = webElement.getAttribute("href");
+				String itemNames = webElement.getText();
+				namesList.add(itemNames);
+				catalogueLinks.add(hrefs);
+			}
+			cataloguePage.getCompareBlock().getProductToCompare().click();
+			urlList.add(i - 1, cataloguePage.getDriver().getCurrentUrl());
+			cataloguePage.getDriver().navigate().back();
+			cataloguePage.refreshLocators();
+			Assert.assertEquals(catalogueLinks, urlList);
+			Assert.assertEquals(catalogueLinks, pricePageLinks,
+					"Some links are shown in search results by mistake! ");
+
+		}
+
+		System.out.println(namesList);
+		System.out.println(catalogueLinks);
+		System.out.println(urlList);
+		System.out.println(goToPricePage(namesList));
+
+	}
+
+	public Set<String> goToPricePage(List<String> namesList) {
+		Set<String> pricePageLinks = new HashSet<String>();
+		cataloguePage.getCompareBlock().getPricePageLink().click();
+
+		for (int j = 0; j < namesList.size(); j++) {
+			cataloguePage.getCompareBlock().getEditField()
+					.sendKeys(namesList.get(j));
+			cataloguePage.getCompareBlock().getSearchField().click();
+
+			List<WebElement> linkToDescription = cataloguePage
+					.getCompareBlock().getTdPricePage();
+
+			for (WebElement webElement : linkToDescription) {
+				String hrefs = webElement.getAttribute("href");
+				pricePageLinks.add(hrefs);
+
+			}
+			cataloguePage.getCompareBlock().getEditField().clear();
+
+		}
+		return pricePageLinks;
+	}
+
+	public void verifyItemLinksAreEqual() {
+		List<String> data = new ArrayList<String>();
+		List<String> pricesLinks = new ArrayList<String>();
+		gerUrls(data, pricesLinks);
+	}
+
+}

@@ -1,0 +1,92 @@
+package com.epam.preproduction.helpers;
+
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.epam.preproduction.components.CompareBlock;
+import com.epam.preproduction.entities.Microwave;
+import com.epam.preproduction.pages.CataloguePage;
+import com.epam.preproduction.pages.ComparePage;
+import com.epam.preproduction.pages.ItemPage;
+
+public class CompareItemsTestHelper {
+
+	private static CataloguePage cataloguePage;
+	private static ItemPage itemPage;
+	private static ComparePage comparePage;
+
+	public static ComparePage getComparePage() {
+		return comparePage;
+	}
+
+	public static ItemPage getItemPage() {
+		return itemPage;
+	}
+
+	public static void setItemPage(ItemPage itemPage) {
+		CompareItemsTestHelper.itemPage = itemPage;
+	}
+
+	public static void setComparePage(ComparePage comparePage) {
+		CompareItemsTestHelper.comparePage = comparePage;
+	}
+
+	public void setPages(CataloguePage cataloguePage, ItemPage itemPage,
+			ComparePage comparePage) {
+		CompareItemsTestHelper.cataloguePage = cataloguePage;
+		CompareItemsTestHelper.setItemPage(itemPage);
+		CompareItemsTestHelper.setComparePage(comparePage);
+	}
+
+	public void checkParameters(ComparePage comparePage, ItemPage itemPage) {
+		cataloguePage.getCompareBlock().getFirstCompareItem().click();
+		cataloguePage.getCompareBlock().getCompareItemsLink().click();
+
+		Microwave microwave1 = ItemPageHelper.grabAllCharacteristics();
+		System.out.println(microwave1.getCharacteristics());
+		cataloguePage.goBack();
+
+		cataloguePage.getCompareBlock().getSecondCompareItem().click();
+		cataloguePage.getCompareBlock().getCompareItemsLink().click();
+
+		Microwave microwave2 = ItemPageHelper.grabAllCharacteristics();
+
+		System.out.println(microwave2.getCharacteristics());
+		cataloguePage.getCompareBlock().getCompareGoods().click();
+
+		Set<String> paramsNames = ComparePageHelper.grabAllParamNames();
+		Set<String> names1 = microwave1.getCharacteristics().keySet();
+		Set<String> names2 = microwave2.getCharacteristics().keySet();
+
+		System.out.println(paramsNames);
+		System.out.println(names1);
+		System.out.println(names2);
+		if (!paramsNames.containsAll(names1)) {
+			Assert.fail();
+		}
+		if (!paramsNames.containsAll(names2)) {
+			Assert.fail();
+		}
+
+		WebElement table = cataloguePage.getCompareBlock().getClassCompare();
+
+		List<WebElement> differentItems = table.findElements(By
+				.className(CompareBlock.DIFFERENT));
+		for (WebElement item : differentItems) {
+			List<WebElement> tds = item.findElements(By
+					.tagName(CompareBlock.TD_COMPARE));
+			for (WebElement td : tds) {
+				if (!td.getCssValue(CompareBlock.BACKGROUND_COLOR)
+						.equalsIgnoreCase(CompareBlock.BG_VALUE)) {
+					Assert.fail();
+				}
+			}
+
+		}
+	}
+
+}
