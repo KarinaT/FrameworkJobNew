@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import com.epam.preproduction.configuration.DataProviderLayer;
 import com.epam.preproduction.helpers.PriceFilterTestHelper;
 import com.epam.preproduction.pages.CataloguePage;
+import com.epam.preproduction.pages.MainPage;
+import com.epam.preproduction.pages.PricePage;
 
 /**
  * 3. Проверить функциональность фильтра по цене (мин, макс) для категории
@@ -16,13 +18,17 @@ import com.epam.preproduction.pages.CataloguePage;
 public class CheckPriceFilterTest extends TestBase {
 
 	CataloguePage cataloguePage;
+	MainPage mainPage;
+	PricePage pricePage;
 	PriceFilterTestHelper helper;
 
 	@BeforeMethod
 	public void configurations() {
 		cataloguePage = new CataloguePage(driver);
+		mainPage = new MainPage(driver);
+		pricePage = new PricePage(driver);
 		helper = new PriceFilterTestHelper();
-		helper.setCataloguePage(cataloguePage);
+		helper.setCataloguePage(cataloguePage, pricePage);
 	}
 
 	@Test(dataProvider = "readFromExcel", dataProviderClass = DataProviderLayer.class)
@@ -31,7 +37,7 @@ public class CheckPriceFilterTest extends TestBase {
 
 		goToMainPage();
 		cataloguePage.selectItemCategory(categoryName);
-		cataloguePage.selectProductType(productType);
+		mainPage.selectProductType(productType);
 		helper.verifyPriceFilter(minPrice, maxPrice);
 	}
 

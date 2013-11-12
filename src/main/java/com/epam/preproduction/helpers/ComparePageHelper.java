@@ -43,22 +43,22 @@ public class ComparePageHelper {
 		return microwaves;
 	}
 
-	public static Set<String> grabAllParamNames() {
-		Set<String> characteristicsNames = new HashSet<String>();
-
-		List<WebElement> comparePageCharacteristics = cataloguePage.getCompareBlock().getCompareClass();
-		for (WebElement element : comparePageCharacteristics) {
-			String characteristicName = cataloguePage.getCompareBlock()
-					.getTdCompare1().getText();
-			characteristicsNames.add(characteristicName);
-		}
-		comparePageCharacteristics = cataloguePage.getCompareBlock()
-				.getTableClassDifferent();
-		for (WebElement element : comparePageCharacteristics) {
-			String characteristicName = cataloguePage.getCompareBlock()
-					.getTdCompare1().getText();
-			characteristicsNames.add(characteristicName);
-		}
-		return characteristicsNames;
-	}
+//	public static Set<String> grabAllParamNames() {
+//		Set<String> characteristicsNames = new HashSet<String>();
+//
+//		List<WebElement> comparePageCharacteristics = cataloguePage.getCompareBlock().getCompareClass();
+//		for (WebElement element : comparePageCharacteristics) {
+//			String characteristicName = cataloguePage.getCompareBlock()
+//					.getTdCompare1().getText();
+//			characteristicsNames.add(characteristicName);
+//		}
+//		comparePageCharacteristics = cataloguePage.getCompareBlock()
+//				.getTableClassDifferent();
+//		for (WebElement element : comparePageCharacteristics) {
+//			String characteristicName = cataloguePage.getCompareBlock()
+//					.getTdCompare1().getText();
+//			characteristicsNames.add(characteristicName);
+//		}
+//		return characteristicsNames;
+//	}
 }

@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.epam.preproduction.configuration.DataProviderLayer;
 import com.epam.preproduction.helpers.FilterParameterTestHelper;
 import com.epam.preproduction.pages.CataloguePage;
+import com.epam.preproduction.pages.MainPage;
 
 /*
  * 5. Проверить корректность работы фильтра «регулировка веса» у хлебопечек, а
@@ -16,11 +17,13 @@ import com.epam.preproduction.pages.CataloguePage;
 public class CheckFilterParameters extends TestBase {
 
 	CataloguePage cataloguePage;
+	MainPage mainPage;
 	FilterParameterTestHelper helper;
 
 	@BeforeMethod
 	public void configuration() {
 		cataloguePage = new CataloguePage(driver);
+		mainPage = new MainPage(driver);
 		helper = new FilterParameterTestHelper();
 		FilterParameterTestHelper.setCataloguePage(cataloguePage);
 	}
@@ -30,7 +33,7 @@ public class CheckFilterParameters extends TestBase {
 			throws Exception {
 
 		goToMainPage();
-		cataloguePage.selectProductType(productType);
+		mainPage.selectProductType(productType);
 		cataloguePage.clickAtFilterParameter(searchParameter);
 
 	}
@@ -39,7 +42,7 @@ public class CheckFilterParameters extends TestBase {
 	public void testFilterByProducer(String productType) throws Exception {
 
 		goToMainPage();
-		cataloguePage.selectProductType(productType);
+		mainPage.selectProductType(productType);
 		helper.verifyManufacturerInNames();
 	}
 

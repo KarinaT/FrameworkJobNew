@@ -24,7 +24,7 @@ public class NavigationLine extends Components {
 	@FindBy(css = LAST_PAGE)
 	WebElement lastPage;
 	
-	@FindBy(css = ACTIVE_LINK)
+	@FindBy(className = ACTIVE_LINK)
 	WebElement activeLink;
 
 	public WebElement getActiveLink() {

@@ -12,13 +12,16 @@ import com.epam.preproduction.components.NavigationLine;
 import com.epam.preproduction.entities.BreadMaker;
 import com.epam.preproduction.entities.Item;
 import com.epam.preproduction.pages.CataloguePage;
+import com.epam.preproduction.pages.PricePage;
 
 public class PriceFilterTestHelper{
 
 	private static CataloguePage cataloguePage;
+	private static PricePage pricePage;
 
-	public void setCataloguePage(CataloguePage cataloguePage) {
+	public void setCataloguePage(CataloguePage cataloguePage, PricePage pricePage) {
 		PriceFilterTestHelper.cataloguePage = cataloguePage;
+		PriceFilterTestHelper.pricePage = pricePage;
 	}
 
 	public void verifyPriceFilter(double minPrice, double maxPrice) {
@@ -40,7 +43,7 @@ public class PriceFilterTestHelper{
 		System.out.println(allMachines.size());
 		System.out.println(allMachines);
 
-		cataloguePage.clickAtPriceFilters((int) maxPrice, (int) minPrice);
+		pricePage.clickAtPriceFilters((int) maxPrice, (int) minPrice);
 
 		List<Item> allFitredMachines = new ArrayList<Item>();
 		while (true) {

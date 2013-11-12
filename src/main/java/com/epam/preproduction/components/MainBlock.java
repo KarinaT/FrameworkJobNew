@@ -11,15 +11,15 @@ public class MainBlock extends Components {
 
 	private static final String ITEM_NAME = "name";
 	private static final String ITEM_PRICE = "price";
-	public static final String DIV_CLASS_ITEM = ".//div[@class='item']";
+	public static final String DIV_CLASS_ITEM = "//div[@class='item']";
 	public static final String DIV_CLASS_NAME = "//div[@class='name']/a";
-	private static final String PRICE_STRONG = ".//div[@class='price']/strong";
-	public static final String CLASS_DESCRIPTION = ".//div[@class='description']";
+	private static final String PRICE_STRONG = "//div[@class='price']/strong";
+	public static final String CLASS_DESCRIPTION = "//div[@class='description']";
 	public static final String NEXT_PAGE = "pager-next";
 
 	public static final String ACTIVE_NEXT_LINK = "active";
 
-	@FindBy(className = CLASS_DESCRIPTION)
+	@FindBy(xpath = CLASS_DESCRIPTION)
 	WebElement description;
 	
 	@FindBy(className = ITEM_NAME)
@@ -39,7 +39,7 @@ public class MainBlock extends Components {
 	List<WebElement> divClassItem;
 
 	@FindBy(xpath = DIV_CLASS_NAME)
-	List<WebElement> divClassName;
+	WebElement divClassName;
 
 	@FindBy(className = NEXT_PAGE)
 	WebElement nextPage;
@@ -56,7 +56,7 @@ public class MainBlock extends Components {
 		return productPrices;
 	}
 
-	public List<WebElement> getDivClassName() {
+	public WebElement getDivClassName() {
 		return divClassName;
 	}
 

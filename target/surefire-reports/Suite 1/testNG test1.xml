@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="EPUAKHAW0472" name="com.epam.preproduction.tests.CheckItemInformation" tests="1" failures="1" timestamp="11 Nov 2013 15:36:07 GMT" time="12.687" errors="0">
-  <testcase name="testItemInformation" time="3.054" classname="com.epam.preproduction.tests.CheckItemInformation">
-    <failure type="java.lang.NullPointerException" message="null value in entry: name=null">
-      <![CDATA[java.lang.NullPointerException: null value in entry: name=null
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:235)
-	at com.google.common.collect.ImmutableMap.entryOf(ImmutableMap.java:144)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:89)
-	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:122)
-	at com.epam.preproduction.helpers.CheckItemInformationTestHelper.gerUrls(CheckItemInformationTestHelper.java:60)
-	at com.epam.preproduction.helpers.CheckItemInformationTestHelper.verifyItemLinksAreEqual(CheckItemInformationTestHelper.java:110)
-	at com.epam.preproduction.tests.CheckItemInformation.testItemInformation(CheckItemInformation.java:34)
+<testsuite hostname="Ice-PC" name="com.epam.preproduction.tests.CheckItemInformation" tests="1" failures="1" timestamp="12 Nov 2013 07:19:57 GMT" time="73.658" errors="0">
+  <testcase name="testItemInformation" time="63.941" classname="com.epam.preproduction.tests.CheckItemInformation">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to locate element: {&amp;quot;method&amp;quot;:&amp;quot;xpath&amp;quot;,&amp;quot;selector&amp;quot;:&amp;quot;//div[@class=&amp;apos;links-bar&amp;apos;]/div[@class=&amp;apos;link&amp;apos;]/a&amp;quot;}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;2.35.0&amp;apos;, revision: &amp;apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&amp;apos;, time: &amp;apos;2013-08-17 12:46:41&amp;apos;
+System info: os.name: &amp;apos;Windows 8&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;6.2&amp;apos;, java.version: &amp;apos;1.7.0_21&amp;apos;
+Session ID: 6c8317e8-7446-4ca9-be44-bd4b437e37dc
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@class='links-bar']/div[@class='link']/a"}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_21'
+Session ID: 6c8317e8-7446-4ca9-be44-bd4b437e37dc
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at com.epam.preproduction.helpers.CheckItemInformationTestHelper.goToPricePage(CheckItemInformationTestHelper.java:193)
+	at com.epam.preproduction.helpers.CheckItemInformationTestHelper.verifyItemLinksAreEqual(CheckItemInformationTestHelper.java:145)
+	at com.epam.preproduction.tests.CheckItemInformation.testItemInformation(CheckItemInformation.java:36)
 	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
 	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
 	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
 	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
 	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
-... Removed 26 stack frames]]>
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"xpath","selector":"//div[@class='links-bar']/div[@class='link']/a"}
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_21'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous7469380783258967338webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8880)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/User/AppData/Local/Temp/anonymous7469380783258967338webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+... Removed 30 stack frames]]>
     </failure>
   </testcase>
 </testsuite>

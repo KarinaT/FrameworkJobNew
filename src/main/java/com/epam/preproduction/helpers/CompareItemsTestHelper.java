@@ -27,38 +27,31 @@ public class CompareItemsTestHelper {
 		return itemPage;
 	}
 
-	public static void setItemPage(ItemPage itemPage) {
-		CompareItemsTestHelper.itemPage = itemPage;
-	}
-
-	public static void setComparePage(ComparePage comparePage) {
-		CompareItemsTestHelper.comparePage = comparePage;
-	}
 
 	public void setPages(CataloguePage cataloguePage, ItemPage itemPage,
 			ComparePage comparePage) {
 		CompareItemsTestHelper.cataloguePage = cataloguePage;
-		CompareItemsTestHelper.setItemPage(itemPage);
-		CompareItemsTestHelper.setComparePage(comparePage);
+		CompareItemsTestHelper.itemPage = itemPage;
+		CompareItemsTestHelper.comparePage = comparePage;
 	}
 
 	public void checkParameters(ComparePage comparePage, ItemPage itemPage) {
 		cataloguePage.getCompareBlock().getFirstCompareItem().click();
 		cataloguePage.getCompareBlock().getCompareItemsLink().click();
 
-		Microwave microwave1 = ItemPageHelper.grabAllCharacteristics();
+		Microwave microwave1 = itemPage.grabAllCharacteristics();
 		System.out.println(microwave1.getCharacteristics());
 		cataloguePage.goBack();
 
 		cataloguePage.getCompareBlock().getSecondCompareItem().click();
 		cataloguePage.getCompareBlock().getCompareItemsLink().click();
 
-		Microwave microwave2 = ItemPageHelper.grabAllCharacteristics();
+		Microwave microwave2 = itemPage.grabAllCharacteristics();
 
 		System.out.println(microwave2.getCharacteristics());
 		cataloguePage.getCompareBlock().getCompareGoods().click();
 
-		Set<String> paramsNames = ComparePageHelper.grabAllParamNames();
+		Set<String> paramsNames = comparePage.grabAllParamNames();
 		Set<String> names1 = microwave1.getCharacteristics().keySet();
 		Set<String> names2 = microwave2.getCharacteristics().keySet();
 

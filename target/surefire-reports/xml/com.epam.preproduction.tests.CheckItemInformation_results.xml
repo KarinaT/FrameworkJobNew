@@ -4,24 +4,48 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="3,054">
+           time="63,941">
   <properties />
-            <testcase name="testItemInformation" time="3,054" classname="com.epam.preproduction.tests.CheckItemInformation">
-                <failure type="java.lang.NullPointerException"
-                  message="null value in entry: name=null"
+            <testcase name="testItemInformation" time="63,941" classname="com.epam.preproduction.tests.CheckItemInformation">
+                <failure type="org.openqa.selenium.NoSuchElementException"
+                  message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;links-bar&apos;]/div[@class=&apos;link&apos;]/a&quot;}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_21&apos;
+Session ID: 6c8317e8-7446-4ca9-be44-bd4b437e37dc
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]"
               >
-<![CDATA[java.lang.NullPointerException: null value in entry: name=null
-  com.google.common.base.Preconditions.checkNotNull(Preconditions.java:235)
-  com.google.common.collect.ImmutableMap.entryOf(ImmutableMap.java:144)
-  com.google.common.collect.ImmutableMap.of(ImmutableMap.java:89)
-  org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:122)
-  com.epam.preproduction.helpers.CheckItemInformationTestHelper.gerUrls(CheckItemInformationTestHelper.java:60)
-  com.epam.preproduction.helpers.CheckItemInformationTestHelper.verifyItemLinksAreEqual(CheckItemInformationTestHelper.java:110)
-  com.epam.preproduction.tests.CheckItemInformation.testItemInformation(CheckItemInformation.java:34)
+<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//div[@class='links-bar']/div[@class='link']/a"}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_21'
+Session ID: 6c8317e8-7446-4ca9-be44-bd4b437e37dc
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+  org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+  org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+  com.sun.proxy.$Proxy8.click(Unknown Source)
+  com.epam.preproduction.helpers.CheckItemInformationTestHelper.goToPricePage(CheckItemInformationTestHelper.java:193)
+  com.epam.preproduction.helpers.CheckItemInformationTestHelper.verifyItemLinksAreEqual(CheckItemInformationTestHelper.java:145)
+  com.epam.preproduction.tests.CheckItemInformation.testItemInformation(CheckItemInformation.java:36)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-  java.lang.reflect.Method.invoke(Unknown Source)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:601)
   org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
   org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
   org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
@@ -44,11 +68,17 @@
   org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
   org.apache.maven.surefire.Surefire.run(Surefire.java:180)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-  java.lang.reflect.Method.invoke(Unknown Source)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:601)
   org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
   org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"xpath","selector":"//div[@class='links-bar']/div[@class='link']/a"}
+Build info: version: '2.35.0', revision: '8df0c6bedf70ff9f22c647788f9fe9c8d22210e2', time: '2013-08-17 12:46:41'
+System info: os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_21'
+Driver info: driver.version: unknown
+  <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous7469380783258967338webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8880)
+  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/User/AppData/Local/Temp/anonymous7469380783258967338webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
 ]]>
       </failure>
 

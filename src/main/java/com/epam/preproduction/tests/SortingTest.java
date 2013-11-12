@@ -10,6 +10,8 @@ import com.epam.preproduction.components.SortingLine;
 import com.epam.preproduction.configuration.DataProviderLayer;
 import com.epam.preproduction.helpers.SortingTestHelper;
 import com.epam.preproduction.pages.CataloguePage;
+import com.epam.preproduction.pages.MainPage;
+import com.epam.preproduction.pages.PricePage;
 
 public class SortingTest extends TestBase {
 
@@ -21,13 +23,14 @@ public class SortingTest extends TestBase {
 
 	CataloguePage cataloguePage;
 	SortingTestHelper helper;
-	SortingLine sortingLine;
-	FiltersBlock filtersBlock;
-	NavigationLine navigationLine;
+	PricePage pricePage;
+	MainPage mainPage;
 
 	@BeforeMethod
 	public void configuration() {
 		cataloguePage = new CataloguePage(driver);
+		pricePage = new PricePage(driver);
+		mainPage = new MainPage(driver);
 		helper = new SortingTestHelper();
 		SortingTestHelper.setCataloguePage(cataloguePage);
 	}
@@ -36,7 +39,7 @@ public class SortingTest extends TestBase {
 	public void testSortingByPrice(String productType) throws Exception {
 
 		goToMainPage();
-		cataloguePage.selectProductType(productType);
+		mainPage.selectProductType(productType);
 		helper.verifySortingItemsByPrices();
 
 	}
@@ -44,7 +47,7 @@ public class SortingTest extends TestBase {
 	@Test(dataProvider = "readFromExcel", dataProviderClass = DataProviderLayer.class)
 	public void testSortingByName(String productType) throws Exception {
 		goToMainPage();
-		cataloguePage.selectProductType(productType);
+		mainPage.selectProductType(productType);
 		helper.verifySortingItemsByNames();
 
 	}

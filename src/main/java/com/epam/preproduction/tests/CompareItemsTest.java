@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.epam.preproduction.configuration.DataProviderLayer;
 import com.epam.preproduction.helpers.CompareItemsTestHelper;
+import com.epam.preproduction.helpers.ItemPageHelper;
 import com.epam.preproduction.helpers.SortingTestHelper;
 import com.epam.preproduction.pages.CataloguePage;
 import com.epam.preproduction.pages.ComparePage;
@@ -25,14 +26,18 @@ public class CompareItemsTest extends TestBase {
 	CataloguePage cataloguePage;
 	CompareItemsTestHelper helper;
 	ComparePage comparePage;
+	ItemPageHelper itemPageHelper;
 	ItemPage itemPage;
+	MainPage mainPage;
 
 	@BeforeMethod
 	public void configuration() {
 		cataloguePage = new CataloguePage(driver);
 		comparePage = new ComparePage(driver);
 		itemPage = new ItemPage(driver);
+		mainPage = new MainPage(driver); 
 		helper = new CompareItemsTestHelper();
+		itemPageHelper = new ItemPageHelper();
 		helper.setPages(cataloguePage, itemPage, comparePage);
 	}
 
@@ -41,7 +46,7 @@ public class CompareItemsTest extends TestBase {
 			throws Exception {
 
 		goToMainPage();
-		cataloguePage.selectProductType(productType);
+		mainPage.selectProductType(productType);
 		helper.checkParameters(comparePage, itemPage);
 
 	}

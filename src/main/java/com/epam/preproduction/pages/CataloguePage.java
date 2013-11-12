@@ -1,9 +1,11 @@
 package com.epam.preproduction.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 
 import com.epam.preproduction.components.CompareBlock;
 import com.epam.preproduction.components.FiltersBlock;
@@ -65,24 +67,14 @@ public class CataloguePage extends Page {
 		driver.findElement(By.linkText(categoryName)).click();
 	}
 
-	public CataloguePage selectProductType(String productType) {
-		driver.findElement(By.linkText(productType)).click();
-		Reporter.log("Clicking at product type");
-		return PageFactory.initElements(driver, CataloguePage.class);
-
-	}
-
-	public FiltersBlock clickAtPriceFilters(int maxPrice, int minPrice) {
-		getDriver().findElement(By.xpath(getFilterBlock().getMaxPrice(maxPrice))).click();
-		getDriver().findElement(By.xpath(getFilterBlock().getMinPrice(minPrice))).click();
-		refreshLocators();
-		Reporter.log("Refreshing locators");
-		return PageFactory.initElements(driver, FiltersBlock.class);
-	}
-
 	public void clickAtFilterParameter(String searchParameter) {
 		getFilterBlock().getFunction(searchParameter);
 
+	}
+
+	public List<WebElement> getCharacteristicsList() {
+		List<WebElement> listOfCharacteristics = driver.findElements(By.className("row"));
+		return listOfCharacteristics;
 	}
 
 }

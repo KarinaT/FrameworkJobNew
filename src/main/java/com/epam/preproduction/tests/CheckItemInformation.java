@@ -7,6 +7,7 @@ import com.epam.preproduction.configuration.DataProviderLayer;
 import com.epam.preproduction.helpers.CheckItemInformationTestHelper;
 import com.epam.preproduction.pages.CataloguePage;
 import com.epam.preproduction.pages.ItemPage;
+import com.epam.preproduction.pages.MainPage;
 import com.epam.preproduction.pages.PricePage;
 
 public class CheckItemInformation extends TestBase {
@@ -14,6 +15,7 @@ public class CheckItemInformation extends TestBase {
 	CataloguePage cataloguePage;
 	PricePage pricePage;
 	ItemPage itemPage;
+	MainPage mainPage;
 	CheckItemInformationTestHelper helper;
 
 	@BeforeMethod
@@ -21,6 +23,7 @@ public class CheckItemInformation extends TestBase {
 		cataloguePage = new CataloguePage(driver);
 		pricePage = new PricePage(driver);
 		itemPage = new ItemPage(driver);
+		mainPage = new MainPage(driver);
 		helper = new CheckItemInformationTestHelper();
 		CheckItemInformationTestHelper.setPages(cataloguePage, pricePage, itemPage);
 	}
@@ -29,8 +32,7 @@ public class CheckItemInformation extends TestBase {
 	public void testItemInformation(String productType) throws Exception {
 
 		goToMainPage();
-		cataloguePage.selectProductType(productType);
-		//pricePage.verifyItemLinksAreEqual();
+		mainPage.selectProductType(productType);
 		helper.verifyItemLinksAreEqual();
 	}
 

@@ -2,6 +2,7 @@ package com.epam.preproduction.components;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,9 +14,11 @@ public class CompareBlock {
 	public static final String DIFFERENT = "different";
 	public static final String CLASS_COMPARE = "compare";
 
-	public static final String CHARACTERISTIC_VALUE = "val";
-	public static final String CHARACTERISTIC_TYPE = "pr";
+	public static final String CHARACTERISTIC_VALUE = "//div[@class='val']";
+	public static final String CHARACTERISTIC_TYPE = "//div[@class='pr']";
 	public static final String CHARACTERISTIC_ROW = "row";
+	//public static final String CHARACTERISTIC_ROW = "//div[@class='row']";
+	
 
 	private static final String FIRST_ITEM = "//div[@class='item'][1]/div[@class='name']/a";
 	private static final String SECOND_ITEM = "//div[@class='item'][2]/div[@class='name']/a";
@@ -33,9 +36,9 @@ public class CompareBlock {
 	private static final String SEARCH_FIELD = "edit-submit-1";
 	private static final String TD_CLASS_N = "//td[@class='n']/a[1]";
 	
-	private static final String TD_COMPARE_3 = ".//td[3]";
-	private static final String TD_COMPARE_2 = ".//td[2]";
-	private static final String TD_COMPARE_1 = ".//td[1]";
+	private static final String TD_COMPARE_3 = "//td[3]";
+	private static final String TD_COMPARE_2 = "//td[2]";
+	private static final String TD_COMPARE_1 = "//td[1]";
 	private static final String TABLE_CLASS_DIFFERENT = "//table[@class='compare']/tbody/tr[@class='different']";
 	private static final String TABLE_CLASS_COMPARE = "//table[@class='compare']/tbody/tr[@class='']";
 	
@@ -80,19 +83,19 @@ public class CompareBlock {
 	}
 
 	@FindBy(xpath = CHARACTERISTIC_VALUE)
-	WebElement characteristicValue;
+	By characteristicValue;
 
 	@FindBy(xpath = CHARACTERISTIC_TYPE)
-	WebElement characteristicType;
+	By characteristicType;
 	
-	@FindBy(xpath = CHARACTERISTIC_ROW)
+	@FindBy(className = CHARACTERISTIC_ROW)
 	List<WebElement> characteristicRow;
 
-	public WebElement getCharacteristicValue() {
+	public By getCharacteristicValue() {
 		return characteristicValue;
 	}
 
-	public WebElement getCharacteristicType() {
+	public By getCharacteristicType() {
 		return characteristicType;
 	}
 
