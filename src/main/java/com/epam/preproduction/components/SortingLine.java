@@ -5,10 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class SortingLine extends Components {
 
-	public SortingLine() {
-		super();
-	}
-
 	public static final String SORT_PRICE = "//a[contains(@href,'sort=price')]";
 	public static final String SORT_NAME = "//div[@class='order']/a[contains(@href,'sort=name')]";
 
