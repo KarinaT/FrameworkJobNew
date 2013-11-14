@@ -17,8 +17,7 @@ public class ComparePage extends Page {
 	public Set<String> grabAllParamNames() {
 		Set<String> characteristicsNames = new HashSet<String>();
 
-		List<WebElement> comparePageCharacteristics = getDriver().findElements(
-				By.xpath("//table[@class='compare']/tbody/tr[@class='']"));
+		List<WebElement> comparePageCharacteristics = getDriver().findElements(By.xpath("//table[@class='compare']/tbody/tr[@class='']"));
 		for (WebElement element : comparePageCharacteristics) {
 			String characteristicName = element.findElement(
 					By.xpath(".//td[1]")).getText();

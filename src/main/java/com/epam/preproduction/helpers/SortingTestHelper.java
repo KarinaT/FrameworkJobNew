@@ -9,7 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import com.epam.preproduction.components.MainBlock;
 import com.epam.preproduction.components.NavigationLine;
 import com.epam.preproduction.entities.BreadMaker;
 import com.epam.preproduction.entities.Item;

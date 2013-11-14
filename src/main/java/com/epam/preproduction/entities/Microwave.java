@@ -3,7 +3,7 @@ package com.epam.preproduction.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Microwave {
+public class Microwave extends Item{
 	private Map<String, String> characteristics;
 
 	public Microwave() {

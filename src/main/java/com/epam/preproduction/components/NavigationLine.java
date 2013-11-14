@@ -34,7 +34,5 @@ public class NavigationLine extends Components {
 	public WebElement getNextItemPage() {
 		return nextItemPage;
 	}
-	
-	
-	
+
 }

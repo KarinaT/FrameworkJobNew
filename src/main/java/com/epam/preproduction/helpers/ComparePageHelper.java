@@ -46,17 +46,15 @@ public class ComparePageHelper {
 //	public static Set<String> grabAllParamNames() {
 //		Set<String> characteristicsNames = new HashSet<String>();
 //
-//		List<WebElement> comparePageCharacteristics = cataloguePage.getCompareBlock().getCompareClass();
+//		//List<WebElement> comparePageCharacteristics = comparePage.getDriver().findElements(By.xpath(cataloguePage.getCompareBlock().TABLE_CLASS_COMPARE));
+//		List<WebElement> comparePageCharacteristics = cataloguePage.getCompareBlock().getTableClassCompare();
 //		for (WebElement element : comparePageCharacteristics) {
-//			String characteristicName = cataloguePage.getCompareBlock()
-//					.getTdCompare1().getText();
+//			String characteristicName = cataloguePage.getCompareBlock().getTdCompare1().getText();
 //			characteristicsNames.add(characteristicName);
 //		}
-//		comparePageCharacteristics = cataloguePage.getCompareBlock()
-//				.getTableClassDifferent();
+//		comparePageCharacteristics = cataloguePage.getCompareBlock().getTableClassDifferent();
 //		for (WebElement element : comparePageCharacteristics) {
-//			String characteristicName = cataloguePage.getCompareBlock()
-//					.getTdCompare1().getText();
+//			String characteristicName = cataloguePage.getCompareBlock().getTdCompare1().getText();
 //			characteristicsNames.add(characteristicName);
 //		}
 //		return characteristicsNames;

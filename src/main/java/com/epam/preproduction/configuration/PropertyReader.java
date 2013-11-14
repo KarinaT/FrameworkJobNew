@@ -6,14 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-
-import com.opera.core.systems.OperaDriver;
-
 public class PropertyReader {
 
 	private static final String sFileName = "configurations.properties";
@@ -54,6 +46,18 @@ public class PropertyReader {
 
 	public static String getScreenShotsFileExtension() {
 		return props.getProperty("screenShotsFileExtension");
+	}
+	
+	public static String getMainPageUrl() {
+		return System.getProperty("home.page.url", "http://pn.com.ua");
+	}
+
+	public static String getOperaBinaryPath() {
+		return System.getProperty("operaDriverFile");
+	}
+	
+	public static String getChromeBinaryPath() {
+		return System.getProperty("chromedriverFile");
 	}
 
 }

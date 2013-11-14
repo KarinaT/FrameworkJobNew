@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
     <line>
       <![CDATA[Go to website's main page]]>
@@ -8,23 +8,157 @@
       <![CDATA[Clicking at product type]]>
     </line>
     <line>
-      <![CDATA[Saved <a href=../screenshots/11_ноя_2013__11_48_19PM.png>Screenshot</a>]]>
+      <![CDATA[Go to website's main page]]>
+    </line>
+    <line>
+      <![CDATA[Clicking at product type]]>
+    </line>
+    <line>
+      <![CDATA[Go to website's main page]]>
+    </line>
+    <line>
+      <![CDATA[Clicking at product type]]>
+    </line>
+    <line>
+      <![CDATA[Go to website's main page]]>
+    </line>
+    <line>
+      <![CDATA[Clicking at product type]]>
+    </line>
+    <line>
+      <![CDATA[Refreshing locators]]>
+    </line>
+    <line>
+      <![CDATA[Go to website's main page]]>
+    </line>
+    <line>
+      <![CDATA[Clicking at product type]]>
+    </line>
+    <line>
+      <![CDATA[Go to website's main page]]>
+    </line>
+    <line>
+      <![CDATA[Clicking at product type]]>
+    </line>
+    <line>
+      <![CDATA[Go to website's main page]]>
+    </line>
+    <line>
+      <![CDATA[Clicking at product type]]>
     </line>
   </reporter-output>
-  <suite name="Suite 1" duration-ms="13432" started-at="2013-11-11T21:48:06Z" finished-at="2013-11-11T21:48:19Z">
+  <suite name="Suite 1" duration-ms="355904" started-at="2013-11-12T11:27:22Z" finished-at="2013-11-12T11:33:18Z">
     <groups>
     </groups>
-    <test name="testNG test1" duration-ms="13432" started-at="2013-11-11T21:48:06Z" finished-at="2013-11-11T21:48:19Z">
-      <class name="com.epam.preproduction.tests.CompareItemsTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.preproduction.tests.CompareItemsTest@51f49ec4]" name="setUp" is-config="true" duration-ms="7614" started-at="2013-11-11T23:48:06Z" finished-at="2013-11-11T23:48:14Z">
+    <test name="testNG test1" duration-ms="355904" started-at="2013-11-12T11:27:22Z" finished-at="2013-11-12T11:33:18Z">
+      <class name="com.epam.preproduction.tests.CheckFilterParameters">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.preproduction.tests.CheckFilterParameters@1991e21]" name="setUp" is-config="true" duration-ms="21" started-at="2013-11-12T13:31:37Z" finished-at="2013-11-12T13:31:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.CompareItemsTest@51f49ec4]" name="configuration" is-config="true" duration-ms="44" started-at="2013-11-11T23:48:14Z" finished-at="2013-11-11T23:48:14Z">
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.CheckFilterParameters@1991e21]" name="configuration" is-config="true" duration-ms="16" started-at="2013-11-12T13:31:37Z" finished-at="2013-11-12T13:31:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configuration -->
-        <test-method status="FAIL" signature="testCompareItems(java.lang.String, java.lang.String)[pri:0, instance:com.epam.preproduction.tests.CompareItemsTest@51f49ec4]" name="testCompareItems" duration-ms="4682" started-at="2013-11-11T23:48:14Z" data-provider="readFromExcel" finished-at="2013-11-11T23:48:19Z">
+        <test-method status="PASS" signature="testFilterByProducer(java.lang.String)[pri:0, instance:com.epam.preproduction.tests.CheckFilterParameters@1991e21]" name="testFilterByProducer" duration-ms="62405" started-at="2013-11-12T13:31:37Z" data-provider="readFromExcel" finished-at="2013-11-12T13:32:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Хлебопечи]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to website's main page]]>
+            </line>
+            <line>
+              <![CDATA[Clicking at product type]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testFilterByProducer -->
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.CheckFilterParameters@1991e21]" name="configuration" is-config="true" duration-ms="3" started-at="2013-11-12T13:32:40Z" finished-at="2013-11-12T13:32:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="testFilterParameter(java.lang.String, java.lang.String)[pri:0, instance:com.epam.preproduction.tests.CheckFilterParameters@1991e21]" name="testFilterParameter" duration-ms="1219" started-at="2013-11-12T13:32:40Z" data-provider="readFromExcel" finished-at="2013-11-12T13:32:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Хлебопечи]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Регулировка веса]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to website's main page]]>
+            </line>
+            <line>
+              <![CDATA[Clicking at product type]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testFilterParameter -->
+      </class> <!-- com.epam.preproduction.tests.CheckFilterParameters -->
+      <class name="com.epam.preproduction.tests.CheckPriceFilterTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.preproduction.tests.CheckPriceFilterTest@d8f5e8]" name="setUp" is-config="true" duration-ms="20" started-at="2013-11-12T13:28:17Z" finished-at="2013-11-12T13:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="configurations()[pri:0, instance:com.epam.preproduction.tests.CheckPriceFilterTest@d8f5e8]" name="configurations" is-config="true" duration-ms="15" started-at="2013-11-12T13:28:17Z" finished-at="2013-11-12T13:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configurations -->
+        <test-method status="PASS" signature="testFilterPrice(java.lang.String, java.lang.String, double, double)[pri:0, instance:com.epam.preproduction.tests.CheckPriceFilterTest@d8f5e8]" name="testFilterPrice" duration-ms="200024" started-at="2013-11-12T13:28:17Z" data-provider="readFromExcel" finished-at="2013-11-12T13:31:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Бытовая техника]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Посудомойки]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6000.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[7000.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to website's main page]]>
+            </line>
+            <line>
+              <![CDATA[Clicking at product type]]>
+            </line>
+            <line>
+              <![CDATA[Refreshing locators]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testFilterPrice -->
+      </class> <!-- com.epam.preproduction.tests.CheckPriceFilterTest -->
+      <class name="com.epam.preproduction.tests.CompareItemsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.preproduction.tests.CompareItemsTest@11ff1b8]" name="setUp" is-config="true" duration-ms="951" started-at="2013-11-12T13:28:03Z" finished-at="2013-11-12T13:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.CompareItemsTest@11ff1b8]" name="configuration" is-config="true" duration-ms="62" started-at="2013-11-12T13:28:04Z" finished-at="2013-11-12T13:28:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="testCompareItems(java.lang.String, java.lang.String)[pri:0, instance:com.epam.preproduction.tests.CompareItemsTest@11ff1b8]" name="testCompareItems" duration-ms="12585" started-at="2013-11-12T13:28:05Z" data-provider="readFromExcel" finished-at="2013-11-12T13:28:17Z">
           <params>
             <param index="0">
               <value>
@@ -37,39 +171,6 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.epam.preproduction.helpers.ItemPageHelper.grabAllCharacteristics(ItemPageHelper.java:32)
-	at com.epam.preproduction.helpers.CompareItemsTestHelper.checkParameters(CompareItemsTestHelper.java:42)
-	at com.epam.preproduction.tests.CompareItemsTest.testCompareItems(CompareItemsTest.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:601)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Go to website's main page]]>
@@ -77,12 +178,84 @@
             <line>
               <![CDATA[Clicking at product type]]>
             </line>
-            <line>
-              <![CDATA[Saved <a href=../screenshots/11_ноя_2013__11_48_19PM.png>Screenshot</a>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- testCompareItems -->
       </class> <!-- com.epam.preproduction.tests.CompareItemsTest -->
+      <class name="com.epam.preproduction.tests.SortingTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.preproduction.tests.SortingTest@d13e3e]" name="setUp" is-config="true" duration-ms="6719" started-at="2013-11-12T13:27:22Z" finished-at="2013-11-12T13:27:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.SortingTest@d13e3e]" name="configuration" is-config="true" duration-ms="177" started-at="2013-11-12T13:27:29Z" finished-at="2013-11-12T13:27:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="testSortingByName(java.lang.String)[pri:0, instance:com.epam.preproduction.tests.SortingTest@d13e3e]" name="testSortingByName" duration-ms="16985" started-at="2013-11-12T13:27:29Z" data-provider="readFromExcel" finished-at="2013-11-12T13:27:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Холодильники]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to website's main page]]>
+            </line>
+            <line>
+              <![CDATA[Clicking at product type]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSortingByName -->
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.SortingTest@d13e3e]" name="configuration" is-config="true" duration-ms="6" started-at="2013-11-12T13:27:46Z" finished-at="2013-11-12T13:27:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="testSortingByPrice(java.lang.String)[pri:0, instance:com.epam.preproduction.tests.SortingTest@d13e3e]" name="testSortingByPrice" duration-ms="17045" started-at="2013-11-12T13:27:46Z" data-provider="readFromExcel" finished-at="2013-11-12T13:28:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Холодильники]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to website's main page]]>
+            </line>
+            <line>
+              <![CDATA[Clicking at product type]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSortingByPrice -->
+      </class> <!-- com.epam.preproduction.tests.SortingTest -->
+      <class name="com.epam.preproduction.tests.CheckItemInformation">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.preproduction.tests.CheckItemInformation@189346e]" name="setUp" is-config="true" duration-ms="917" started-at="2013-11-12T13:32:41Z" finished-at="2013-11-12T13:32:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.epam.preproduction.tests.CheckItemInformation@189346e]" name="configuration" is-config="true" duration-ms="14" started-at="2013-11-12T13:32:42Z" finished-at="2013-11-12T13:32:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="testItemInformation(java.lang.String)[pri:0, instance:com.epam.preproduction.tests.CheckItemInformation@189346e]" name="testItemInformation" duration-ms="36191" started-at="2013-11-12T13:32:42Z" data-provider="readFromExcel" finished-at="2013-11-12T13:33:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Кондиционеры]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Go to website's main page]]>
+            </line>
+            <line>
+              <![CDATA[Clicking at product type]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testItemInformation -->
+      </class> <!-- com.epam.preproduction.tests.CheckItemInformation -->
     </test> <!-- testNG test1 -->
   </suite> <!-- Suite 1 -->
 </testng-results>

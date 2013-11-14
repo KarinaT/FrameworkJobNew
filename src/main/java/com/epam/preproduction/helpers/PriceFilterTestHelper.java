@@ -77,8 +77,7 @@ public class PriceFilterTestHelper{
 			if (machine.getPrice() <= maxPrice
 					&& machine.getPrice() >= minPrice) {
 
-				Assert.assertTrue(allFitredMachines.size() == Integer
-						.parseInt(totalFilteredItems));
+				Assert.assertTrue(allFitredMachines.size() == Integer.parseInt(totalFilteredItems));
 			}
 		}
 	}

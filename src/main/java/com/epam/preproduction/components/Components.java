@@ -9,5 +9,4 @@ public abstract class Components {
 	public WebDriver getWebrdiver() {
 		return webrdiver;
 	}
-
 }

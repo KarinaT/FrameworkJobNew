@@ -1,6 +1,8 @@
 package com.epam.preproduction.helpers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -8,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.epam.preproduction.components.CompareBlock;
+import com.epam.preproduction.entities.Item;
 import com.epam.preproduction.entities.Microwave;
 import com.epam.preproduction.pages.CataloguePage;
 import com.epam.preproduction.pages.ComparePage;
@@ -27,7 +30,6 @@ public class CompareItemsTestHelper {
 		return itemPage;
 	}
 
-
 	public void setPages(CataloguePage cataloguePage, ItemPage itemPage,
 			ComparePage comparePage) {
 		CompareItemsTestHelper.cataloguePage = cataloguePage;
@@ -39,21 +41,21 @@ public class CompareItemsTestHelper {
 		cataloguePage.getCompareBlock().getFirstCompareItem().click();
 		cataloguePage.getCompareBlock().getCompareItemsLink().click();
 
-		Microwave microwave1 = itemPage.grabAllCharacteristics();
-		System.out.println(microwave1.getCharacteristics());
+		Item firstItem = grabAllCharacteristics();
+		System.out.println(firstItem.getCharacteristics());
 		cataloguePage.goBack();
 
 		cataloguePage.getCompareBlock().getSecondCompareItem().click();
 		cataloguePage.getCompareBlock().getCompareItemsLink().click();
 
-		Microwave microwave2 = itemPage.grabAllCharacteristics();
+		Item secondItem = grabAllCharacteristics();
 
-		System.out.println(microwave2.getCharacteristics());
+		System.out.println(secondItem.getCharacteristics());
 		cataloguePage.getCompareBlock().getCompareGoods().click();
 
 		Set<String> paramsNames = comparePage.grabAllParamNames();
-		Set<String> names1 = microwave1.getCharacteristics().keySet();
-		Set<String> names2 = microwave2.getCharacteristics().keySet();
+		Set<String> names1 = firstItem.getCharacteristics().keySet();
+		Set<String> names2 = secondItem.getCharacteristics().keySet();
 
 		System.out.println(paramsNames);
 		System.out.println(names1);
@@ -80,6 +82,26 @@ public class CompareItemsTestHelper {
 			}
 
 		}
+	}
+
+	public static Item grabAllCharacteristics() {
+		Item item = new Microwave();
+		Map<String, String> itemMap = new HashMap<String, String>();
+
+		List<WebElement> listOfCharacteristics = itemPage.getDriver().findElements(By.className("row"));
+		for (WebElement element : listOfCharacteristics) {
+			String charateristicName = element.findElement(By.className("pr"))
+					.getText();
+			String charateristicValue = element
+					.findElement(By.className("val")).getText();
+			itemMap.put(charateristicName, charateristicValue);
+		}
+		item.setCharacteristics(itemMap);
+		return item;
+	}
+
+	public String getCurrentLinks() {
+		return itemPage.getDriver().getCurrentUrl();
 	}
 
 }

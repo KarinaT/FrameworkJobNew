@@ -11,12 +11,10 @@ public class MainPage extends Page {
 		super(driver);
 
 	}
-
 	public CataloguePage selectProductType(String productType) {
 		driver.findElement(By.linkText(productType)).click();
 		Reporter.log("Clicking at product type");
 		return PageFactory.initElements(driver, CataloguePage.class);
-
 	}
 
 }

@@ -9,9 +9,9 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.epam.preproduction.configuration.PropertyReader;
 import com.opera.core.systems.OperaDriver;
 
 public class WebDriverFactory {
@@ -101,10 +101,14 @@ public class WebDriverFactory {
 			return new FirefoxDriver(capabilities);
 		if (browserType.startsWith("internet explorer"))
 			return new InternetExplorerDriver(capabilities);
-		if (browserType.equals("chrome"))
+		if (browserType.equals("chrome")){
+			System.setProperty("webdriver.chrome.driver", PropertyReader.getChromeBinaryPath());
 			return new ChromeDriver(capabilities);
-		if (browserType.equals("opera"))
+		}
+		if (browserType.equals("opera")) {
+			System.setProperty("opera.binary", PropertyReader.getOperaBinaryPath());
 			return new OperaDriver(capabilities);
+		}
 		throw new Error("Unrecognized browser type: " + browserType);
 	}
 

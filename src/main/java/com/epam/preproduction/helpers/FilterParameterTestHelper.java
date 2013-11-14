@@ -65,9 +65,7 @@ public class FilterParameterTestHelper {
 
 	public List<Item> grabItems() {
 		List<Item> result = new ArrayList<Item>();
-
-//		List<WebElement> items = cataloguePage.getMainBlock().getDivClassName();
-		  List<WebElement> items = cataloguePage.getMainBlock().getDivClassItem();
+		List<WebElement> items = cataloguePage.getMainBlock().getDivClassItem();
 
 		for (WebElement item : items) {
 			BreadMaker breadMaker = new BreadMaker();

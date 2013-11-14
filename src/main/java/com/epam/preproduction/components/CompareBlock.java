@@ -17,7 +17,8 @@ public class CompareBlock {
 	public static final String CHARACTERISTIC_VALUE = "//div[@class='val']";
 	public static final String CHARACTERISTIC_TYPE = "//div[@class='pr']";
 	public static final String CHARACTERISTIC_ROW = "row";
-	//public static final String CHARACTERISTIC_ROW = "//div[@class='row']";
+	public final String DIV_CLASS_ITEM_PART_2 = "]/div/a";
+	public final String DIV_CLASS_ITEM_PART_1 = "//div[@class='item'][";
 	
 
 	private static final String FIRST_ITEM = "//div[@class='item'][1]/div[@class='name']/a";
@@ -31,16 +32,16 @@ public class CompareBlock {
 	private static final String ITEMS_TO_COMPARE = "//div[@class='item']/div/a";
 
 	private static final String PRODUCT_TO_COMPARE = "//div[@class='item']/div/a";
-	private static final String PRICE_PAGE_LINK = "//div[@class='links-bar']/div[@class='link']/a";
+	private static final String PRICE_PAGE_LINK = ".link>a";
 	private static final String EDIT_FIELD = "edit-name-1";
 	private static final String SEARCH_FIELD = "edit-submit-1";
 	private static final String TD_CLASS_N = "//td[@class='n']/a[1]";
 	
-	private static final String TD_COMPARE_3 = "//td[3]";
-	private static final String TD_COMPARE_2 = "//td[2]";
-	private static final String TD_COMPARE_1 = "//td[1]";
-	private static final String TABLE_CLASS_DIFFERENT = "//table[@class='compare']/tbody/tr[@class='different']";
-	private static final String TABLE_CLASS_COMPARE = "//table[@class='compare']/tbody/tr[@class='']";
+	public static final String TD_COMPARE_3 = "//td[3]";
+	public static final String TD_COMPARE_2 = "//td[2]";
+	public final String TD_COMPARE_1 = "//td[1]";
+	public final String TABLE_CLASS_DIFFERENT = "//table[@class='compare']/tbody/tr[@class='different']";
+	public final String TABLE_CLASS_COMPARE = "//table[@class='compare']/tbody/tr[@class='']";
 	
 	
 	@FindBy(className = CLASS_COMPARE)
@@ -112,7 +113,7 @@ public class CompareBlock {
 	@FindBy(xpath = SEARCH_FIELD)
 	WebElement searchField;
 
-	@FindBy(xpath = PRICE_PAGE_LINK)
+	@FindBy(css = PRICE_PAGE_LINK)
 	WebElement pricePageLink;
 
 	@FindBy(xpath = ITEMS_TO_COMPARE)
