@@ -7,9 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class MainBlock extends Components {
 
-	//public static final String BASE_URL = "http://pn.com.ua";
-	//public static final String BASE_URL = PropertyReader.getMainPageUrl();	
-
 	private static final String ITEM_NAME = "name";
 	private static final String ITEM_PRICE = "price";
 	public static final String DIV_CLASS_ITEM = "//div[@class='item']";
@@ -17,7 +14,6 @@ public class MainBlock extends Components {
 	private static final String PRICE_STRONG = "//div[@class='price']/strong";
 	public static final String CLASS_DESCRIPTION = "//div[@class='description']";
 	public static final String NEXT_PAGE = "pager-next";
-
 	public static final String ACTIVE_NEXT_LINK = "active";
 
 	@FindBy(xpath = CLASS_DESCRIPTION)

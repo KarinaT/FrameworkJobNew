@@ -34,7 +34,7 @@ public class CheckItemInformation extends TestBase {
 		goToMainPage();
 		mainPage.selectProductType(productType);
 		helper.verifyItemLinksAreEqual();
-		//helper.checkDescriptions();
+
 	}
 
 }

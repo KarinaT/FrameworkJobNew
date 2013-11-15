@@ -3,7 +3,7 @@ package com.epam.preproduction.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Item implements Comparable<Item>{
+public abstract class Item implements Comparable<Item> {
 
 	private String name;
 	private int price;
@@ -49,7 +49,7 @@ public abstract class Item implements Comparable<Item>{
 	public int compareTo(Item item) {
 		return this.name.compareTo(item.name);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Item [name=" + name + ", price=" + price + ", desciption="

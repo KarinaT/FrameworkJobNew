@@ -15,7 +15,6 @@ public class DataProviderLayer {
 	}
 
 	private static String getDataFileName(Method method) {
-		return PropertyReader.getInputExcelFileName()
-				+ method.getDeclaringClass().getSimpleName() + ".xls";
+		return PropertyReader.getInputExcelFileName()+ method.getDeclaringClass().getSimpleName() + ".xls";
 	}
 }

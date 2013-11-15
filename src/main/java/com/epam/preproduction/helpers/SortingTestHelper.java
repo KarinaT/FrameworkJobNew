@@ -66,36 +66,6 @@ public class SortingTestHelper {
 	}
 
 	public List<Item> grabItems() {
-
-		// List<Item> result = new ArrayList<Item>();
-		//
-		// List<WebElement> items =
-		// cataloguePage.getMainBlock().getDivClassItem();
-		// System.out.println(items);
-		// for (WebElement item : items) {
-		// BreadMaker breadMaker = new BreadMaker();
-		// // String name = cataloguePage.getMainBlock().getProductNames()
-		// // .getText();
-		// String name = cataloguePage.getMainBlock().getDivClassName()
-		// .getText();
-		// // int price = extratNumbers(cataloguePage.getMainBlock()
-		// // .getPriceStrong().getText());
-		// int price = extratNumbers(cataloguePage.getMainBlock()
-		// .getPriceStrong().getText());
-		// cataloguePage.getMainBlock();
-		// // String description =
-		// // cataloguePage.getMainBlock().getDescription()
-		// // .getText();
-		// String description = item.findElement(
-		// By.xpath(MainBlock.CLASS_DESCRIPTION))
-		// .getText();
-		// System.out.println(description);
-		// breadMaker.setName(name);
-		// breadMaker.setPrice(price);
-		// breadMaker.setDescription(description);
-		// result.add(breadMaker);
-		// }
-		// return result;
 		List<Item> result = new ArrayList<Item>();
 		List<WebElement> items = cataloguePage.getMainBlock().getDivClassItem();
 

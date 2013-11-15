@@ -1,8 +1,6 @@
 package com.epam.preproduction.helpers;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -11,7 +9,6 @@ import org.testng.Assert;
 
 import com.epam.preproduction.components.CompareBlock;
 import com.epam.preproduction.entities.Item;
-import com.epam.preproduction.entities.Microwave;
 import com.epam.preproduction.pages.CataloguePage;
 import com.epam.preproduction.pages.ComparePage;
 import com.epam.preproduction.pages.ItemPage;
@@ -41,14 +38,14 @@ public class CompareItemsTestHelper {
 		cataloguePage.getCompareBlock().getFirstCompareItem().click();
 		cataloguePage.getCompareBlock().getCompareItemsLink().click();
 
-		Item firstItem = grabAllCharacteristics();
+		Item firstItem = itemPage.grabAllCharacteristics();
 		System.out.println(firstItem.getCharacteristics());
 		cataloguePage.goBack();
 
 		cataloguePage.getCompareBlock().getSecondCompareItem().click();
 		cataloguePage.getCompareBlock().getCompareItemsLink().click();
 
-		Item secondItem = grabAllCharacteristics();
+		Item secondItem = itemPage.grabAllCharacteristics();
 
 		System.out.println(secondItem.getCharacteristics());
 		cataloguePage.getCompareBlock().getCompareGoods().click();
@@ -82,26 +79,6 @@ public class CompareItemsTestHelper {
 			}
 
 		}
-	}
-
-	public static Item grabAllCharacteristics() {
-		Item item = new Microwave();
-		Map<String, String> itemMap = new HashMap<String, String>();
-
-		List<WebElement> listOfCharacteristics = itemPage.getDriver().findElements(By.className("row"));
-		for (WebElement element : listOfCharacteristics) {
-			String charateristicName = element.findElement(By.className("pr"))
-					.getText();
-			String charateristicValue = element
-					.findElement(By.className("val")).getText();
-			itemMap.put(charateristicName, charateristicValue);
-		}
-		item.setCharacteristics(itemMap);
-		return item;
-	}
-
-	public String getCurrentLinks() {
-		return itemPage.getDriver().getCurrentUrl();
 	}
 
 }

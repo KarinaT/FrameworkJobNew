@@ -15,8 +15,7 @@ public class PropertyReader {
 	static {
 		File currentDir = new File(".");
 		try {
-			String sFilePath = currentDir.getCanonicalPath() + sDirSeparator
-					+ sFileName;
+			String sFilePath = currentDir.getCanonicalPath() + sDirSeparator + sFileName;
 
 			FileInputStream ins = new FileInputStream(sFilePath);
 			props.load(ins);
@@ -47,17 +46,20 @@ public class PropertyReader {
 	public static String getScreenShotsFileExtension() {
 		return props.getProperty("screenShotsFileExtension");
 	}
-	
+
 	public static String getMainPageUrl() {
 		return System.getProperty("home.page.url", "http://pn.com.ua");
 	}
 
 	public static String getOperaBinaryPath() {
-		return props.getProperty("operaDriverFile");
-	}
-	
-	public static String getChromeBinaryPath() {
-		return props.getProperty("chromedriverFile");
+		return System.getProperty("operaDriverFile");
 	}
 
+	public static String getChromeBinaryPath() {
+		return System.getProperty("chromedriverFile");
+	}
+
+	public static String getInputXmlFileName() {
+		return props.getProperty("fileInputXml");
+	}
 }

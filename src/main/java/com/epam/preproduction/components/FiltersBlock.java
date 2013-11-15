@@ -11,6 +11,19 @@ public class FiltersBlock {
 	private static final String PRODUCER_FILTER = "//*[@id='page-content-wrap']/div[3]/div[1]/div[1]/div/div[2]/div[5]/div[2]/a[@class=' active']";
 	private static final String SHOW_COMMON_PRODUCER = "//*[@id='page-content-wrap']/div[3]/div[1]/div[1]/div/div[2]/div[5]/div[2]/a[17]";
 	private static final String REST_PRODUCER_FILTER = "//*[@id='page-content-wrap']/div[3]/div[1]/div[1]/div/div[2]/div[5]/div[2]/div[3]/a[@class=' active']";
+	
+	@FindBy(xpath = FILTERED_ITEMS_COUNT)
+	WebElement filteredItemsCount;
+
+	@FindBy(xpath = PRODUCER_FILTER)
+	List<WebElement> producerFilter;
+
+	@FindBy(xpath = SHOW_COMMON_PRODUCER)
+	WebElement showCommonProducer;
+
+	@FindBy(xpath = REST_PRODUCER_FILTER)
+	List<WebElement> restProducerFilter;
+	
 
 	public String getMinPrice(int minPrice) {
 		return "//div[contains(text(),'Минимальная цена')]/../div[2]/a[text()='"
@@ -26,18 +39,6 @@ public class FiltersBlock {
 		return "//a[contains(text(),'" + functionName + "')]";
 
 	}
-
-	@FindBy(xpath = FILTERED_ITEMS_COUNT)
-	WebElement filteredItemsCount;
-
-	@FindBy(xpath = PRODUCER_FILTER)
-	List<WebElement> producerFilter;
-
-	@FindBy(xpath = SHOW_COMMON_PRODUCER)
-	WebElement showCommonProducer;
-
-	@FindBy(xpath = REST_PRODUCER_FILTER)
-	List<WebElement> restProducerFilter;
 
 	public WebElement getFilteredItemsCount() {
 		return filteredItemsCount;

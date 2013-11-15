@@ -3,15 +3,13 @@ package com.epam.preproduction.helpers;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.Reporter;
 
-import com.epam.preproduction.entities.Item;
 import com.epam.preproduction.pages.CataloguePage;
 import com.epam.preproduction.pages.ItemPage;
 import com.epam.preproduction.pages.PricePage;
@@ -80,7 +78,7 @@ public class CheckItemInformationTestHelper {
 									+ i
 									+ cataloguePage.getCompareBlock().DIV_CLASS_ITEM_PART_2));
 			for (WebElement webElement : names) {
-				String hrefs = webElement.getAttribute("href");
+				String hrefs = webElement.getAttribute(cataloguePage.getCompareBlock().HREF);
 				String itemNames = webElement.getText();
 				namesList.add(itemNames);
 				catalogueLinks.add(hrefs);
@@ -95,8 +93,7 @@ public class CheckItemInformationTestHelper {
 			urlList.add(i - 1, itemPage.getDriver().getCurrentUrl());
 			cataloguePage.goBack();
 			cataloguePage.refreshLocators();
-			Assert.assertNotEquals(catalogueLinks, pricePageLinks,
-					"Some links are shown in search results by mistake! ");
+			Assert.assertNotEquals(catalogueLinks, pricePageLinks, "Some links are shown in search results by mistake! ");
 
 		}
 
@@ -112,42 +109,26 @@ public class CheckItemInformationTestHelper {
 		Set<String> pricePageLinks = new HashSet<String>();
 		cataloguePage.getCompareBlock().getPricePageLink().click();
 		for (int j = 0; j < namesList.size(); j++) {
-			pricePage.getDriver().findElement(By.id("edit-name-1"))
+			// pricePage.getDriver().findElement(By.id(cataloguePage.getCompareBlock().getSearchField())).sendKeys(namesList.get(j));
+			cataloguePage.getCompareBlock().getEditField()
 					.sendKeys(namesList.get(j));
-			pricePage.getDriver().findElement(By.id("edit-submit-1")).click();
+			cataloguePage.getCompareBlock().getSearchField().click();
 
-			List<WebElement> linkToDescription = pricePage.getDriver()
-					.findElements(By.xpath("//td[@class='n']/a[1]"));
+			// List<WebElement> linkToDescription =
+			// pricePage.getDriver().findElements(By.xpath("//td[@class='n']/a[1]"));
+			List<WebElement> linkToDescription = cataloguePage
+					.getCompareBlock().getTdPricePage();
 
 			for (WebElement webElement : linkToDescription) {
-				String hrefs = webElement.getAttribute("href");
+				String hrefs = webElement.getAttribute(cataloguePage.getCompareBlock().HREF);
 				pricePageLinks.add(hrefs);
 
 			}
-			pricePage.getDriver().findElement(By.id("edit-name-1")).clear();
+			// pricePage.getDriver().findElement(By.id("edit-name-1")).clear();
+			cataloguePage.getCompareBlock().getEditField().clear();
 
 		}
 		return pricePageLinks;
 	}
 
-	public void checkDescriptions() {
-		List<WebElement> listOfDescriptions = cataloguePage.getMainBlock()
-				.getDescriptionList();
-		List<String> catalogueDescriptions = new ArrayList<String>();
-		Map<String, String> allCharacteristics = CompareItemsTestHelper.grabAllCharacteristics().getCharacteristics();
-		
-		String descriptions = " ";
-
-		for (int i = 0; i < 5; i++) {
-			descriptions = listOfDescriptions.get(i).getText();
-			catalogueDescriptions.add(descriptions);
-
-			for (Entry<String, String> entry : allCharacteristics.entrySet()) {
-				Assert.assertTrue(allCharacteristics.containsKey(catalogueDescriptions.get(i)) || allCharacteristics.containsValue(catalogueDescriptions.get(i)));
-				
-			}
-
-			System.out.println(catalogueDescriptions);
-		}
-	}
 }
