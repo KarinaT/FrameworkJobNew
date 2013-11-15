@@ -30,7 +30,7 @@ public class PricePage extends Page {
 		this.filterBlock = PageFactory.initElements(driver, FiltersBlock.class);
 	}
 
-	public FiltersBlock clickAtPriceFilters(int maxPrice, int minPrice) {
+	public FiltersBlock clickPriceFilters(int maxPrice, int minPrice) {
 		getDriver().findElement(
 				By.xpath(getFilterBlock().getMaxPrice(maxPrice))).click();
 		getDriver().findElement(

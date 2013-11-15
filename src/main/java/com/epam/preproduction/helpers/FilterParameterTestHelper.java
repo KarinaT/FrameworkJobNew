@@ -23,7 +23,7 @@ public class FilterParameterTestHelper {
 
 	public void verifyFilterWeightControlParameter(String searchParameter) {
 
-		cataloguePage.clickAtFilterParameter(searchParameter);
+		cataloguePage.clickFilterParameter(searchParameter);
 		List<Item> filteredBreadMakersList = new ArrayList<Item>();
 		while (true) {
 			filteredBreadMakersList.addAll(grabItems());

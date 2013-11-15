@@ -43,7 +43,7 @@ public class PriceFilterTestHelper{
 		System.out.println(allMachines.size());
 		System.out.println(allMachines);
 
-		pricePage.clickAtPriceFilters((int) maxPrice, (int) minPrice);
+		pricePage.clickPriceFilters((int) maxPrice, (int) minPrice);
 
 		List<Item> allFitredMachines = new ArrayList<Item>();
 		while (true) {

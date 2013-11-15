@@ -64,7 +64,7 @@ public class CataloguePage extends Page {
 		driver.findElement(By.linkText(categoryName)).click();
 	}
 
-	public void clickAtFilterParameter(String searchParameter) {
+	public void clickFilterParameter(String searchParameter) {
 		getFilterBlock().getFunction(searchParameter);
 
 	}

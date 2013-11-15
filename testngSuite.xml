@@ -6,19 +6,11 @@
 	</listeners>
 	<test name="testNG test1">
 		<classes>
-<<<<<<< HEAD
 			<class name="com.epam.preproduction.tests.SortingTest" />
 			<class name="com.epam.preproduction.tests.CompareItemsTest" />
 			<class name="com.epam.preproduction.tests.CheckPriceFilterTest" />
 			<class name="com.epam.preproduction.tests.CheckFilterParameters" />
 			<class name="com.epam.preproduction.tests.CheckItemInformation" />
-=======
-				<class name="com.epam.preproduction.tests.SortingTest" /> 
-				<class name="com.epam.preproduction.tests.CompareItemsTest" /> 
-				<class name="com.epam.preproduction.tests.CheckPriceFilterTest" />
- 				<class name="com.epam.preproduction.tests.CheckFilterParameters" /> 
- 				<class name="com.epam.preproduction.tests.CheckItemInformation" /> 
->>>>>>> c0f791b14a863125597ca02ee94deb1aecb78858
 		</classes>
 	</test>
 </suite>

@@ -34,7 +34,7 @@ public class CheckFilterParameters extends TestBase {
 
 		goToMainPage();
 		mainPage.selectProductType(productType);
-		cataloguePage.clickAtFilterParameter(searchParameter);
+		cataloguePage.clickFilterParameter(searchParameter);
 
 	}
 

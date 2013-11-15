@@ -78,7 +78,8 @@ public class CheckItemInformationTestHelper {
 									+ i
 									+ cataloguePage.getCompareBlock().DIV_CLASS_ITEM_PART_2));
 			for (WebElement webElement : names) {
-				String hrefs = webElement.getAttribute(cataloguePage.getCompareBlock().HREF);
+				String hrefs = webElement.getAttribute(cataloguePage
+						.getCompareBlock().HREF);
 				String itemNames = webElement.getText();
 				namesList.add(itemNames);
 				catalogueLinks.add(hrefs);
@@ -93,7 +94,8 @@ public class CheckItemInformationTestHelper {
 			urlList.add(i - 1, itemPage.getDriver().getCurrentUrl());
 			cataloguePage.goBack();
 			cataloguePage.refreshLocators();
-			Assert.assertNotEquals(catalogueLinks, pricePageLinks, "Some links are shown in search results by mistake! ");
+			Assert.assertNotEquals(catalogueLinks, pricePageLinks,
+					"Some links are shown in search results by mistake! ");
 
 		}
 
@@ -109,22 +111,19 @@ public class CheckItemInformationTestHelper {
 		Set<String> pricePageLinks = new HashSet<String>();
 		cataloguePage.getCompareBlock().getPricePageLink().click();
 		for (int j = 0; j < namesList.size(); j++) {
-			// pricePage.getDriver().findElement(By.id(cataloguePage.getCompareBlock().getSearchField())).sendKeys(namesList.get(j));
 			cataloguePage.getCompareBlock().getEditField()
 					.sendKeys(namesList.get(j));
 			cataloguePage.getCompareBlock().getSearchField().click();
 
-			// List<WebElement> linkToDescription =
-			// pricePage.getDriver().findElements(By.xpath("//td[@class='n']/a[1]"));
 			List<WebElement> linkToDescription = cataloguePage
 					.getCompareBlock().getTdPricePage();
 
 			for (WebElement webElement : linkToDescription) {
-				String hrefs = webElement.getAttribute(cataloguePage.getCompareBlock().HREF);
+				String hrefs = webElement.getAttribute(cataloguePage
+						.getCompareBlock().HREF);
 				pricePageLinks.add(hrefs);
 
 			}
-			// pricePage.getDriver().findElement(By.id("edit-name-1")).clear();
 			cataloguePage.getCompareBlock().getEditField().clear();
 
 		}
