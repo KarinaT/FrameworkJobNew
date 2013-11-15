@@ -33,7 +33,10 @@ public class CompareBlock {
 	private static final String EDIT_FIELD = "edit-name-1";
 	private static final String SEARCH_FIELD = "edit-submit-1";
 	private static final String TD_CLASS_N = "//td[@class='n']/a[1]";
+<<<<<<< HEAD
 	public static final String HREF = "href";
+=======
+>>>>>>> c0f791b14a863125597ca02ee94deb1aecb78858
 
 	// === LOCATORS TO FIND DIFFERENT PARAMETERS === //
 
