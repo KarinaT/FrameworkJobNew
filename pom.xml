@@ -108,9 +108,9 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testngSuite.xml</suiteXmlFile>
 					</suiteXmlFiles>
-<!-- 					 <suiteXmlFiles>  -->
-<!-- 					<suiteXmlFile>xmlData/${testSuite}.xml</suiteXmlFile> -->
-<!--  					</suiteXmlFiles> -->
+ 					 <suiteXmlFiles>  
+ 					<suiteXmlFile>xmlData/${testSuite}.xml</suiteXmlFile>
+  					</suiteXmlFiles> 
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
