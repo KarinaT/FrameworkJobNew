@@ -47,7 +47,7 @@ public class CompareItemsTest extends TestBase {
 
 		goToMainPage();
 		mainPage.selectProductType(productType);
-		helper.checkParameters(comparePage, itemPage);
+		helper.checkParametersssss(comparePage, itemPage);
 
 	}
 
