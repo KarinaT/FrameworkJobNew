@@ -29,40 +29,36 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">testNG test1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">62,2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">testNG test1</td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">235,9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <a id="summary"></a>
 <table cellspacing=0 cellpadding=0 class="passed">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
 <tr><th colspan="4">testNG test1 &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">com.epam.preproduction.tests.CheckItemInformation<td><a href="#m1"><b>testItemInformation</b>  </a></td><td class="numi">1</td><td class="numi">45783</td></tr>
+<tr class="failedodd"><td rowspan="1">com.epam.preproduction.tests.CompareItemsTest<td><a href="#m1"><b>testCompareItems</b>  </a></td><td class="numi">1</td><td class="numi">9743</td></tr>
+<tr class="failedeven"><td rowspan="2">com.epam.preproduction.tests.SortingTest<td><a href="#m2"><b>testSortingByPrice</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="failedeven"><td><a href="#m3"><b>testSortingByName</b>  </a></td><td class="numi">1</td><td class="numi">4510</td></tr>
+<tr class="failedodd"><td rowspan="1">com.epam.preproduction.tests.CheckPriceFilterTest<td><a href="#m4"><b>testFilterPrice</b>  </a></td><td class="numi">1</td><td class="numi">63112</td></tr>
+<tr><th colspan="4">testNG test1 &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">com.epam.preproduction.tests.CheckItemInformation<td><a href="#m5"><b>testItemInformation</b>  </a></td><td class="numi">1</td><td class="numi">35532</td></tr>
+<tr class="passedeven"><td rowspan="2">com.epam.preproduction.tests.CheckFilterParameters<td><a href="#m6"><b>testFilterByProducer</b>  </a></td><td class="numi">1</td><td class="numi">77921</td></tr><tr class="passedeven"><td><a href="#m7"><b>testFilterParameter</b>  </a></td><td class="numi">1</td><td class="numi">1243</td></tr>
 </table>
 <h1>testNG test1</h1>
-<a id="m1"></a><h2>com.epam.preproduction.tests.CheckItemInformation:testItemInformation</h2>
+<a id="m1"></a><h2>com.epam.preproduction.tests.CompareItemsTest:testCompareItems</h2>
 <table cellspacing=0 cellpadding=0 class="param">
-<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
-<tr><td style="padding-left:.5em;padding-right:2em">Кондиционеры</td>
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Бытовая техника</td>
+<td style="padding-left:.5em;padding-right:2em">Микроволновки</td>
 </tr>
-<tr><td style="padding-left:3em" colspan="1">
+<tr><td style="padding-left:3em" colspan="2">
 <h3>Test Messages</h3>
 Go to website's main page<br/>
 Clicking at product type<br/>
 <h3>Failure</h3>
-<p>Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;edit-submit-1&quot;}
-Command duration or timeout: 30.17 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<p>Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_21&apos;
-Session ID: d58005ae-1b57-4977-b26e-7f525c565ee8
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
 <br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
@@ -70,18 +66,226 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
 <br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
 <br/>at com.sun.proxy.$Proxy8.click(Unknown Source)
-<br/>at com.epam.preproduction.helpers.CheckItemInformationTestHelper.goToPricePage(CheckItemInformationTestHelper.java:115)
-<br/>at com.epam.preproduction.helpers.CheckItemInformationTestHelper.gerUrls(CheckItemInformationTestHelper.java:103)
-<br/>at com.epam.preproduction.helpers.CheckItemInformationTestHelper.verifyItemLinksAreEqual(CheckItemInformationTestHelper.java:61)
-<br/>at com.epam.preproduction.tests.CheckItemInformation.testItemInformation(CheckItemInformation.java:36)
+<br/>at com.epam.preproduction.helpers.CompareItemsTestHelper.checkParameters(CompareItemsTestHelper.java:39)
+<br/>at com.epam.preproduction.tests.CompareItemsTest.testCompareItems(CompareItemsTest.java:50)
 <br/>35 lines not shown
-<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;edit-submit-1&quot;}
+<p>Caused by Connection to http://127.0.0.1:7055 refused</p>
+org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+<br/>at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+<br/>at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+<br/>at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:640)
+<br/>at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+<br/>at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:337)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
+<br/>at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:133)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:367)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+<br/>at com.sun.proxy.$Proxy8.click(Unknown Source)
+<br/>at com.epam.preproduction.helpers.CompareItemsTestHelper.checkParameters(CompareItemsTestHelper.java:39)
+<br/>at com.epam.preproduction.tests.CompareItemsTest.testCompareItems(CompareItemsTest.java:50)
+<br/>35 lines not shown
+<p>Caused by Connection refused: connect</p>
+java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br/>at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br/>at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br/>at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br/>at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br/>at java.net.PlainSocketImpl.connect(Unknown Source)
+<br/>at java.net.SocksSocketImpl.connect(Unknown Source)
+<br/>at java.net.Socket.connect(Unknown Source)
+<br/>at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+<br/>at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+<br/>at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+<br/>at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+<br/>at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:640)
+<br/>at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+<br/>at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:337)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
+<br/>at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:133)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:367)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+<br/>at com.sun.proxy.$Proxy8.click(Unknown Source)
+<br/>at com.epam.preproduction.helpers.CompareItemsTestHelper.checkParameters(CompareItemsTestHelper.java:39)
+<br/>at com.epam.preproduction.tests.CompareItemsTest.testCompareItems(CompareItemsTest.java:50)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>com.epam.preproduction.tests.SortingTest:testSortingByPrice</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Холодильники</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>The FirefoxDriver cannot be used after quit() was called.
 Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
-System info: os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_21&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:364)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:783)
+<br/>at com.epam.preproduction.tests.TestBase.goToMainPage(TestBase.java:40)
+<br/>at com.epam.preproduction.tests.SortingTest.testSortingByPrice(SortingTest.java:41)
+<br/>35 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>com.epam.preproduction.tests.SortingTest:testSortingByName</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Холодильники</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+Go to website's main page<br/>
+Clicking at product type<br/>
+<h3>Failure</h3>
+<p>Window not found. The browser window may have been closed.
+Command duration or timeout: 27 milliseconds
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 446c9817-857f-4829-bf2d-5f976c3b0c1a
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:332)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:408)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:339)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:295)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:75)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:35)
+<br/>at com.sun.proxy.$Proxy9.iterator(Unknown Source)
+<br/>at com.epam.preproduction.helpers.SortingTestHelper.grabItems(SortingTestHelper.java:72)
+<br/>at com.epam.preproduction.helpers.SortingTestHelper.verifySortingItemsByNames(SortingTestHelper.java:54)
+<br/>at com.epam.preproduction.tests.SortingTest.testSortingByName(SortingTest.java:51)
+<br/>35 lines not shown
+<p>Caused by Window not found. The browser window may have been closed.
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
 Driver info: driver.version: unknown</p>
-&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous6686056762863383323webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8880)
-<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/User/AppData/Local/Temp/anonymous6686056762863383323webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+&lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10890)
+<br/>at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:7750)
+<br/>at &lt;anonymous class&gt;.Resource.prototype.handle(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:7896)
+<br/>at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:7843)
+<br/>at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:10687)
+<br/>at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1935)
+<br/>at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2261)
+<br/>at &lt;anonymous class&gt;.Connection.prototype.process(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1168)
+<br/>at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1616)
+<br/>at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1464)
+<br/>at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous6071640569945134108webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1333)
 <br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>com.epam.preproduction.tests.CheckPriceFilterTest:testFilterPrice</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th><th style="padding-left:1em;padding-right:1em">Parameter #3</th><th style="padding-left:1em;padding-right:1em">Parameter #4</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Бытовая техника</td>
+<td style="padding-left:.5em;padding-right:2em">Посудомойки</td>
+<td style="padding-left:.5em;padding-right:2em">6000.0</td>
+<td style="padding-left:.5em;padding-right:2em">7000.0</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="4">
+<h3>Test Messages</h3>
+Go to website's main page<br/>
+Clicking at product type<br/>
+<h3>Failure</h3>
+<p>Window not found. The browser window may have been closed.
+Command duration or timeout: 117 milliseconds
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Session ID: 4de0cac7-4fbc-4c27-b934-21c7eb48e718
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=true, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=25.0}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
+<br/>at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:41)
+<br/>at com.sun.proxy.$Proxy8.getText(Unknown Source)
+<br/>at com.epam.preproduction.helpers.PriceFilterTestHelper.grabItems(PriceFilterTestHelper.java:93)
+<br/>at com.epam.preproduction.helpers.PriceFilterTestHelper.verifyPriceFilter(PriceFilterTestHelper.java:33)
+<br/>at com.epam.preproduction.tests.CheckPriceFilterTest.testFilterPrice(CheckPriceFilterTest.java:41)
+<br/>35 lines not shown
+<p>Caused by Window not found. The browser window may have been closed.
+Build info: version: &apos;2.35.0&apos;, revision: &apos;8df0c6bedf70ff9f22c647788f9fe9c8d22210e2&apos;, time: &apos;2013-08-17 12:46:41&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10890)
+<br/>at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:7750)
+<br/>at &lt;anonymous class&gt;.Resource.prototype.handle(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:7896)
+<br/>at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:7843)
+<br/>at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:10687)
+<br/>at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1935)
+<br/>at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2261)
+<br/>at &lt;anonymous class&gt;.Connection.prototype.process(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1168)
+<br/>at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1616)
+<br/>at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1464)
+<br/>at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///C:/Users/KARYNA~1.COM/AppData/Local/Temp/anonymous4225829428652989921webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1333)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>com.epam.preproduction.tests.CheckItemInformation:testItemInformation</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Кондиционеры</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+Go to website's main page<br/>
+Clicking at product type<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>com.epam.preproduction.tests.CheckFilterParameters:testFilterByProducer</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Хлебопечи</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+Go to website's main page<br/>
+Clicking at product type<br/>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>com.epam.preproduction.tests.CheckFilterParameters:testFilterParameter</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Хлебопечи</td>
+<td style="padding-left:.5em;padding-right:2em">Регулировка веса</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+Go to website's main page<br/>
+Clicking at product type<br/>
 </td></tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>

@@ -6,9 +6,36 @@
   </listeners>
   <test name="testNG test1(failed)" preserve-order="false">
     <classes>
+      <class name="com.epam.preproduction.tests.CheckPriceFilterTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="configurations"/>
+          <include name="testFilterPrice" invocation-numbers="0"/>
+        </methods>
+      </class>
+      <class name="com.epam.preproduction.tests.CompareItemsTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="configuration"/>
+          <include name="testCompareItems" invocation-numbers="0"/>
+        </methods>
+      </class>
       <class name="com.epam.preproduction.tests.CheckItemInformation">
         <methods>
-          <include name="testItemInformation" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="configuration"/>
+        </methods>
+      </class>
+      <class name="com.epam.preproduction.tests.SortingTest">
+        <methods>
+          <include name="testSortingByName" invocation-numbers="0"/>
+          <include name="configuration"/>
+          <include name="setUp"/>
+          <include name="testSortingByPrice" invocation-numbers="0"/>
+        </methods>
+      </class>
+      <class name="com.epam.preproduction.tests.CheckFilterParameters">
+        <methods>
           <include name="setUp"/>
           <include name="configuration"/>
         </methods>
